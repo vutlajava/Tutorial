@@ -1,124 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="receipt" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="13acf49e-4913-4d1b-bccc-113817ad15d1">
-
-    <!-- Parameters -->
-    <parameter name="receiptNo" class="java.lang.String"/>
-    <parameter name="billNo" class="java.lang.String"/>
-    <parameter name="citizenName" class="java.lang.String"/>
-    <parameter name="serviceType" class="java.lang.String"/>
-    <parameter name="amount" class="java.math.BigDecimal"/>
-    <parameter name="paymentMode" class="java.lang.String"/>
-    <parameter name="transactionId" class="java.lang.String"/>
-    <parameter name="receiptDate" class="java.lang.String"/>
-
-    <!-- Title -->
-    <title>
-        <band height="80">
-
-            <staticText>
-                <reportElement x="0" y="0" width="216" height="20"/>
-                <textElement textAlignment="Center">
-                    <font size="12" isBold="true"/>
-                </textElement>
-                <text><![CDATA[GREENFIELD MUNICIPALITY]]></text>
-            </staticText>
-
-            <staticText>
-                <reportElement x="0" y="22" width="216" height="15"/>
-                <textElement textAlignment="Center">
-                    <font size="8"/>
-                </textElement>
-                <text><![CDATA[Payment Receipt]]></text>
-            </staticText>
-
-            <line>
-                <reportElement x="0" y="45" width="216" height="1"/>
-            </line>
-
-        </band>
-    </title>
-
-    <!-- Detail -->
-    <detail>
-        <band height="180">
-
-            <textField>
-                <reportElement x="0" y="0" width="216" height="15"/>
-                <textFieldExpression><![CDATA["Receipt No : " + $P{receiptNo}]]></textFieldExpression>
-            </textField>
-
-            <textField>
-                <reportElement x="0" y="20" width="216" height="15"/>
-                <textFieldExpression><![CDATA["Bill No    : " + $P{billNo}]]></textFieldExpression>
-            </textField>
-
-            <textField>
-                <reportElement x="0" y="40" width="216" height="15"/>
-                <textFieldExpression><![CDATA["Citizen    : " + $P{citizenName}]]></textFieldExpression>
-            </textField>
-
-            <textField>
-                <reportElement x="0" y="60" width="216" height="15"/>
-                <textFieldExpression><![CDATA["Service    : " + $P{serviceType}]]></textFieldExpression>
-            </textField>
-
-            <textField>
-                <reportElement x="0" y="80" width="216" height="15"/>
-                <textFieldExpression><![CDATA["Amount     : $" + $P{amount}]]></textFieldExpression>
-            </textField>
-
-            <textField>
-                <reportElement x="0" y="100" width="216" height="15"/>
-                <textFieldExpression><![CDATA["Payment    : " + $P{paymentMode}]]></textFieldExpression>
-            </textField>
-
-            <textField>
-                <reportElement x="0" y="120" width="216" height="15"/>
-                <textFieldExpression><![CDATA["Txn ID     : " + $P{transactionId}]]></textFieldExpression>
-            </textField>
-
-            <textField>
-                <reportElement x="0" y="140" width="216" height="15"/>
-                <textFieldExpression><![CDATA["Date       : " + $P{receiptDate}]]></textFieldExpression>
-            </textField>
-
-        </band>
-    </detail>
-
-    <!-- Summary -->
-    <summary>
-        <band height="80">
-
-            <line>
-                <reportElement x="0" y="0" width="216" height="1"/>
-            </line>
-
-            <staticText>
-                <reportElement x="0" y="15" width="216" height="15"/>
-                <textElement textAlignment="Center">
-                    <font size="9" isBold="true"/>
-                </textElement>
-                <text><![CDATA[PAYMENT RECEIVED]]></text>
-            </staticText>
-
-            <staticText>
-                <reportElement x="0" y="35" width="216" height="15"/>
-                <textElement textAlignment="Center">
-                    <font size="8"/>
-                </textElement>
-                <text><![CDATA[Thank You]]></text>
-            </staticText>
-
-            <staticText>
-                <reportElement x="0" y="55" width="216" height="15"/>
-                <textElement textAlignment="Center">
-                    <font size="7"/>
-                </textElement>
-                <text><![CDATA[Generated by Municipality Billing System]]></text>
-            </staticText>
-
-        </band>
-    </summary>
-
+	<parameter name="receiptNo" class="java.lang.String"/>
+	<parameter name="billNo" class="java.lang.String"/>
+	<parameter name="citizenName" class="java.lang.String"/>
+	<parameter name="serviceType" class="java.lang.String"/>
+	<parameter name="amount" class="java.math.BigDecimal"/>
+	<parameter name="paymentMode" class="java.lang.String"/>
+	<parameter name="transactionId" class="java.lang.String"/>
+	<parameter name="receiptDate" class="java.lang.String"/>
+	<title>
+		<band height="80">
+			<staticText>
+				<reportElement x="0" y="0" width="216" height="20" uuid="d946095b-1444-4600-a231-a6f76baf3758"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GREENFIELD MUNICIPALITY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="22" width="216" height="15" uuid="51a5cca1-cd9d-413b-828d-2fb7aaab6fae"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Payment Receipt]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="45" width="216" height="1" uuid="2efceb8c-058b-4332-99d9-c9746991faca"/>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="180">
+			<textField>
+				<reportElement x="0" y="0" width="216" height="15" uuid="7ebede64-3888-4b24-a82c-11c599b13b71"/>
+				<textFieldExpression><![CDATA["Receipt No : " + $P{receiptNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="20" width="216" height="15" uuid="9ba4426b-880a-46f1-8a70-a689ae5e866b"/>
+				<textFieldExpression><![CDATA["Bill No        : " + $P{billNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="40" width="216" height="15" uuid="9bccf226-e2cc-4d29-82e0-a6d6aee4e326"/>
+				<textFieldExpression><![CDATA["Citizen        : " + $P{citizenName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="60" width="216" height="15" uuid="84cd949a-eff0-40cd-b4ae-f820bece1f60"/>
+				<textFieldExpression><![CDATA["Service       : " + $P{serviceType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="80" width="216" height="15" uuid="c5c3765d-a538-4200-82c6-b9e54de0fb81"/>
+				<textFieldExpression><![CDATA["Amount       : $" + $P{amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="100" width="216" height="15" uuid="12eb515a-7c74-4878-83f7-b9c33a6fd8ca"/>
+				<textFieldExpression><![CDATA["Payment     : " + $P{paymentMode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="120" width="216" height="15" uuid="54924553-b573-430f-a13b-ea806201261e"/>
+				<textFieldExpression><![CDATA["Txn ID         : " + $P{transactionId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="140" width="216" height="15" uuid="87c3924c-f2aa-4777-a6b6-99dc58ee6bcd"/>
+				<textFieldExpression><![CDATA["Date            : " + $P{receiptDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="80">
+			<line>
+				<reportElement x="0" y="0" width="216" height="1" uuid="28fc718a-c5a8-48a0-9c5b-a6d300ecf02a"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="15" width="216" height="15" uuid="1ad94f07-3221-43fc-8147-fc4f6f76d921"/>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PAYMENT RECEIVED]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="35" width="216" height="15" uuid="5ca70603-85c3-4d2b-92eb-5e9827020121"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Thank You]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="55" width="216" height="15" uuid="5d7f89f3-1774-4734-ab5d-20d899f01b33"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Generated by Municipality Billing System]]></text>
+			</staticText>
+		</band>
+	</summary>
 </jasperReport>
